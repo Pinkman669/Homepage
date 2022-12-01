@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+/* Background video */
+.video-container{
+    background: #000;
+    position: fixed;
+    top: 0; right 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+
+.video-foreground,
+.video-container iframe{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -98;
+}
+
+.logo a{
+    color: #FFFFFF;
+    font-family: "Lucida Handwriting";
+}
+
+.hide{
+    position: absolute;
+    top: 15vw;
+    text-align: center;
+    visibility: visible;
+    font-family: "Courier New";
+    transition-duration: 1s;
+    transition-property: opacity transition;
+    opacity: 0;
+}
+
+.logo:hover + .hide{
+    visibility: visible;
+    color: grey;
+    opacity: 1;
+}
+
+
+/* Mute button */
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    bottom: 2vw;
+    width: auto;
+    padding: 20px;
+}
+
+.button-container > button{
+    text-align: center;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 5px 5px;
+    opacity: 0.5;
+    color: yellow;
+    border-color: yellow;
+    background: transparent;
+    cursor: pointer;
+}

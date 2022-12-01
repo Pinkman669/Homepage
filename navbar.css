@@ -1,0 +1,153 @@
+/* Navbar */
+#navbar{
+    background: #222;
+    padding: 0px 20px;
+}
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block; /* To make the nav bar clickable from the block not just the text */
+}
+
+#navbar ul li a:hover{
+    text-decoration: underline;
+}
+
+.menu li{
+    /* Format aim for mobile device first*/
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.logo a{
+    font-size: 20px;
+}
+
+.button.secondary{
+    border-bottom: 1px #444 solid;
+}
+
+
+/* Mobile Menu */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    /* Move the toggle bar infront of two buttons */
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    text-align: center;
+    width: 100%; /* Make the button wider in mobile menu*/
+    order: 3;
+    display: none; /* Hidden the menu bar */
+}
+
+.item.active{
+    display: block; /* Using JS to display the menu bar */
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/* Desktop Menu */
+
+@media all and (min-width: 768px){
+    .item{
+        display: block; /* Display all button */
+        width: auto;
+        order: 1;
+    }
+    .toggle{
+        display: none; /* Hide that */
+    }
+    .logo{
+        order: 0;
+    }
+    .button{
+        order: 2;
+
+    }
+    .menu li{
+        padding: 15px 10px; /* Space out the menu button */
+    }
+    .menu li.button{
+        padding-right: 0; /* To minus the extra padding from tablet mode */
+        padding-left: 0;
+    }
+}
+
+
+/* Tablet Menu */
+
+@media all and (min-width: 468px){ /* Device with min-width: 468px will display */
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1; /* Make the logo occupy large portion of ul */
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block; /* display some of the menu button */
+    }
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border: 0; /* Get rid of that bottom line */
+        padding: 0;
+        background: teal;
+        border:1px solid #006d6d;
+        border-radius: 20px;
+    }
+    .button a{
+        padding: 7px 15px;
+        text-decoration: none;
+
+    }
+    .button.secondary a:hover{
+        transition: all .25s;
+    }
+}
