@@ -1,0 +1,75 @@
+body{
+    background-image: url("https://media.npr.org/assets/img/2013/11/27/johnmayer-perf_ata-2-_wide-7223907cce5e9dbe9577a72b55b70f20a793efa6.jpg");
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    /* Background image is fixed in the viewpoint */
+    background-attachment: fixed;
+    /* Make the image rescale based on the container's size */
+    background-size: cover;
+    /* Set a background color that will be displayed while the image is loading */
+    background-color: #464646;
+}
+
+
+
+
+.container{
+    margin: 40px;
+}
+
+
+.container #home{
+    border-radius: 10px;
+    border: solid yellow;
+    background: transparent;
+    padding: 10px;
+    color: yellow;
+}
+
+.container #home a{
+    color: yellow;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.container #home:hover{
+    background: light grey;
+    opacity: 0.5;
+    transition-property: opacity transition;
+    transition-duration: 0.2s;
+}
+
+.text-container{
+    position: absolute;
+    top: 25%;
+    left: 23%;
+    color: white;
+    border: solid 5px white;
+    margin: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 50%;
+    background: grey;
+    opacity: 0.8;
+}
+
+.text-container p{
+    padding: 15px 35px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 468px){
+    body{
+        background-image: url("https://64.media.tumblr.com/1bf946fa9dfcded0b671797a22caf4fe/tumblr_ojtx4qnW6Q1tloukjo3_1280.jpg");
+    }
+    .text-container{
+        width: 70%;
+        left: 8%;
+    }
+    .text-container p{
+        margin: 20px 0;
+    }
+}
